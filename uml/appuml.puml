@@ -1,0 +1,69 @@
+@startuml
+class ToDoListApplication{
+}
+
+class ToDoListController{
+    +ArrayList<ToDoList> ToDoListArray
+    --
+    +void onCreateNewListClick()
+}
+
+ToDoListController --* ToDoList : contains "many"
+
+class ToDoList{
+    -String listName
+    -ArrayList<Item> itemList
+    --
+    +ArrayList<Item> getItemList()
+    +void setItemList(ArrayList<Item> items)
+    --
+    +void addItem()
+}
+ToDoList - EditToDoList : changes <
+class EditToDoList{
+    +void editListTitle(ToDoList toDoList)
+    +void removeList(ToDoList toDoList)
+}
+
+ToDoList --* Item : contains "many"
+
+class Item{
+    -String itemName
+    -String itemDesc
+    -String itemDue
+    -Boolean itemComplete
+    --
+    +String getItemName()
+    +String getItemDesc()
+    +String getItemDue()
+    +Boolean getItemComplete()
+    --
+    +void setItemName(String itemName)
+    +void setItemDesc(String itemDesc)
+    +void setItemDue(String ItemDue)
+    +boolean setItemComplete(boolean itemComplete)
+}
+Item - EditItem : changes <
+class EditItem{
+    +void editItemDesc(Item item)
+    +void editItemDate(Item item)
+    +void editItemComplete(Item item)
+    +void removeItem(ToDoList toDoList)
+}
+
+
+class FilterList{
+    +void showCompleteItems(ToDoList toDoList)
+    +void showIncompleteItems(ToDoList toDoList)
+    +void showAllItems(ToDoList toDoList)
+}
+
+class SaveList{}
+
+class SaveAllList{}
+
+class LoadList{}
+
+class LoadAllList{}
+
+@enduml
