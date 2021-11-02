@@ -1,10 +1,13 @@
 package ucf.assignments;
 
-import java.util.ArrayList;
+import javafx.collections.ObservableList;
 
 public class EditToDoList {
-    void addToDoList(ArrayList<ToDoList> toDoLists){
-        toDoLists.add(new ToDoList());
-    }
 
+    void editListTitle(ToDoList toDoList){
+        //Edits the title of the to-do list
+    }
+    void removeList(ObservableList<ToDoList> allLists, ToDoList listRemoved){
+        //Removes the specified to-do list from the list of to-do lists
+    }
 }

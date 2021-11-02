@@ -1,34 +1,45 @@
 package ucf.assignments;
 
+import javafx.beans.property.SimpleStringProperty;
+
+import java.time.LocalDate;
+
 public class Item {
 
-    private String itemName;
-    private String itemDesc;
-    private String itemDue;
+    private SimpleStringProperty itemName;
+    private SimpleStringProperty itemDesc;
+    private LocalDate itemDue;
     private boolean itemComplete;
+
+    public Item(String itemName, String itemDesc, LocalDate itemDue, boolean itemComplete){
+        this.itemName = new SimpleStringProperty(itemName);
+        this.itemDesc = new SimpleStringProperty(itemDesc);
+        this.itemDue = itemDue;
+        this.itemComplete = itemComplete;
+    }
 
 
     public String getItemName() {
-        return itemName;
+        return itemName.get();
     }
 
     public void setItemName(String itemName) {
-        this.itemName = itemName;
+        this.itemName = new SimpleStringProperty(itemName);
     }
 
     public String getItemDesc() {
-        return itemDesc;
+        return itemDesc.get();
     }
 
     public void setItemDesc(String itemDesc) {
-        this.itemDesc = itemDesc;
+        this.itemDesc = new SimpleStringProperty(itemDesc);
     }
 
-    public String getItemDue() {
+    public LocalDate getItemDue() {
         return itemDue;
     }
 
-    public void setItemDue(String itemDue) {
+    public void setItemDue(LocalDate itemDue) {
         this.itemDue = itemDue;
     }
 

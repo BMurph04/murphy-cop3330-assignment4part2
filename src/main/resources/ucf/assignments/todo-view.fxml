@@ -7,7 +7,6 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-
 <BorderPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelloController">
    <top>
       <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="30.0" prefWidth="214.0" text="To-Do Lists" BorderPane.alignment="CENTER">
@@ -17,9 +16,11 @@
       </Label>
    </top>
    <bottom>
-      <HBox alignment="CENTER" prefHeight="50.0" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" prefHeight="50.0" spacing="90.0" BorderPane.alignment="CENTER">
          <children>
             <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#onCreateNewListClick" text="Create New To-Do List" />
+            <Button mnemonicParsing="false" onAction="#onLoadToDoListClick" text="Load To-Do List" />
+            <Button mnemonicParsing="false" onAction="#onRemoveToDoListClick" text="Remove To-Do List" />
          </children>
       </HBox>
    </bottom>

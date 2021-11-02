@@ -28,7 +28,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField />
+                  <TextField promptText="Item Name" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -38,7 +38,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <TextField prefHeight="90.0" prefWidth="250.0" />
+                  <TextField prefHeight="90.0" prefWidth="250.0" promptText="Description" />
                </children>
             </HBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
@@ -48,7 +48,7 @@
                         <Font size="14.0" />
                      </font>
                   </Label>
-                  <DatePicker />
+                  <DatePicker promptText="Due Date" />
                </children>
             </HBox>
          </children>

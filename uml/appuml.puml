@@ -6,15 +6,35 @@ class ToDoListController{
     +ArrayList<ToDoList> ToDoListArray
     --
     +void onCreateNewListClick()
+    +void onRemoveToDoListClick()
+    +void onAddNewItemClick()
+    +void onRemoveItemClick()
+    --
+    +void onBackClick()
+    +void onNewToDoOkClick()
+    +void onToDoCancelClick()
+    +void onNewItemOkClick()
+    +void onNewItemCancelClick()
+    --
+    +void changeNameCellEvent()
+    +void changeDueDateCellEvent()
+    +void changeDescriptionCellEvent()
+    +void onMarkCompleteClick()
+    --
+    +void onShowCompleteClick()
+    +void onShowIncompleteClick()
+    --
+    +void onSaveToDoListClick()
+    +void onLoadToDoListClick()
 }
 
 ToDoListController --* ToDoList : contains "many"
 
 class ToDoList{
     -String listName
-    -ArrayList<Item> itemList
+    -ObservableList<Item> itemList
     --
-    +ArrayList<Item> getItemList()
+    +ObservableList<Item> getItemList()
     +void setItemList(ArrayList<Item> items)
     --
     +void addItem()
@@ -22,8 +42,11 @@ class ToDoList{
 ToDoList - EditToDoList : changes <
 class EditToDoList{
     +void editListTitle(ToDoList toDoList)
-    +void removeList(ToDoList toDoList)
+    +void removeList(ObservableList<ToDoList> allLists, ToDoList listRemoved)
 }
+SaveList - ToDoList : saves >
+LoadList - ToDoList : loads >
+
 
 ToDoList --* Item : contains "many"
 
@@ -45,10 +68,12 @@ class Item{
 }
 Item - EditItem : changes <
 class EditItem{
+    +void editItemName (Item item))
     +void editItemDesc(Item item)
     +void editItemDate(Item item)
     +void editItemComplete(Item item)
-    +void removeItem(ToDoList toDoList)
+    +void applyToItem(Item item)
+    +void removeItem(ToDoList currentList, Item itemRemoved)
 }
 
 
@@ -58,12 +83,16 @@ class FilterList{
     +void showAllItems(ToDoList toDoList)
 }
 
-class SaveList{}
+class SaveList{
+    +void handleSave()
+    +void saveFile()
+    +void saveAllFiles()
+}
 
-class SaveAllList{}
+class LoadList{
+    +void loadList()
+    +void loadAllLists()
+}
 
-class LoadList{}
-
-class LoadAllList{}
 
 @enduml
