@@ -17,14 +17,13 @@
    </top>
    <bottom>
       <HBox alignment="CENTER" prefHeight="50.0" spacing="90.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#onCreateNewListClick" text="Create New To-Do List" />
-            <Button mnemonicParsing="false" onAction="#onLoadToDoListClick" text="Load To-Do List" />
-            <Button mnemonicParsing="false" onAction="#onRemoveToDoListClick" text="Remove To-Do List" />
-         </children>
+         <Button lineSpacing="10.0" mnemonicParsing="false" onAction="#onCreateNewListClick"
+                 text="Create New To-Do List"/>
+         <Button mnemonicParsing="false" onAction="#onLoadToDoListClick" text="Load To-Do List"/>
+         <Button mnemonicParsing="false" onAction="#onRemoveToDoListClick" text="Remove To-Do List"/>
       </HBox>
    </bottom>
    <center>
-      <ListView fx:id="listView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <ListView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
    </center>
 </BorderPane>

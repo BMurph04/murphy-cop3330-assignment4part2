@@ -10,22 +10,18 @@
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelloController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button mnemonicParsing="false" onAction="#onNewToDoOkClick" prefWidth="80.0" text="Ok" />
-            <Button mnemonicParsing="false" onAction="#onToDoCancelClick" prefWidth="80.0" text="Cancel" />
-         </children>
+         <Button mnemonicParsing="false" onAction="#onNewToDoOkClick" prefWidth="80.0" text="Ok"/>
+         <Button mnemonicParsing="false" onAction="#onNewToDoCancelClick" prefWidth="80.0" text="Cancel"/>
       </HBox>
    </bottom>
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
-         <children>
-            <Label text="Enter Title: ">
-               <font>
-                  <Font size="14.0" />
-               </font>
-            </Label>
-            <TextField promptText="Title" />
-         </children>
+         <Label text="Enter Title: ">
+            <font>
+               <Font size="14.0"/>
+            </font>
+         </Label>
+         <TextField fx:id="newListNameField" promptText="Title"/>
       </HBox>
    </center>
 </BorderPane>

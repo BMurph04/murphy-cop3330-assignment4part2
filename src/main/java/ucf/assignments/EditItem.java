@@ -1,5 +1,9 @@
 package ucf.assignments;
 
+import javafx.util.StringConverter;
+
+import java.time.LocalDate;
+
 public class EditItem {
     public Item editItemName(Item item){
         //Saves new name to corresponding item in list
@@ -18,9 +22,9 @@ public class EditItem {
         return item;
     }
 
-    public Item applyToItem(Item item){
+    public static Item applyToItem(String newItemName, String newItemDesc, LocalDate newItemDate){
         //Applies the name, description, due date, and mark-as-complete to the new Item object
-        return item;
+        return new Item(newItemName, newItemDesc, newItemDate, false);
     }
     public ToDoList removeItem(ToDoList currentList, Item itemRemoved){
         //Removes the specified item from the to-do list
