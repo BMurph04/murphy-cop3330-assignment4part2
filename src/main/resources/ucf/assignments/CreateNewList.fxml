@@ -7,21 +7,21 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.CreateNewListController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <Button mnemonicParsing="false" onAction="#onNewToDoOkClick" prefWidth="80.0" text="Ok"/>
-         <Button mnemonicParsing="false" onAction="#onNewToDoCancelClick" prefWidth="80.0" text="Cancel"/>
+         <Button mnemonicParsing="false" onAction="#onNewToDoOkClick" prefWidth="80.0" text="Ok" />
+         <Button mnemonicParsing="false" onAction="#onNewToDoCancelClick" prefWidth="80.0" text="Cancel" />
       </HBox>
    </bottom>
    <center>
       <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" BorderPane.alignment="CENTER">
          <Label text="Enter Title: ">
             <font>
-               <Font size="14.0"/>
+               <Font size="14.0" />
             </font>
          </Label>
-         <TextField fx:id="newListNameField" promptText="Title"/>
+         <TextField fx:id="newListNameField" promptText="Title" />
       </HBox>
    </center>
 </BorderPane>

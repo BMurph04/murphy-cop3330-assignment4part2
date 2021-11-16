@@ -1,14 +1,14 @@
 package ucf.assignments;
+
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
-import java.util.*;
+import java.util.ArrayList;
 
-//Creates to-do list object containing name and list of items in to-do list
-public class ToDoList {
+public class ToDoListTestingObject {
 
     private String listName;
-    private ArrayList<Item> itemArrayList = new ArrayList<>();
+    private ArrayList<ItemTestingObject> itemArrayList = new ArrayList<>();
 
 
     public String getListName() {
@@ -18,34 +18,33 @@ public class ToDoList {
         this.listName = listName;
     }
 
-    public ArrayList<Item> getItemArrayList() {
+    public ArrayList<ItemTestingObject> getItemArrayList() {
         return itemArrayList;
     }
-    public void setItemArrayList(ArrayList<Item> itemArrayList) {
+    public void setItemArrayList(ArrayList<ItemTestingObject> itemArrayList) {
         this.itemArrayList = itemArrayList;
     }
 
     //Converts array list to observable list
-    public ObservableList<Item> getItemObservableList(){
-        ObservableList<Item> itemObservableList = FXCollections.observableArrayList();
+    public ObservableList<ItemTestingObject> getItemObservableList(){
+        ObservableList<ItemTestingObject> itemObservableList = FXCollections.observableArrayList();
         itemObservableList.addAll(getItemArrayList());
         return itemObservableList;
     }
 
 
-    public ArrayList<Item> addItem(Item newItem){
+    public ArrayList<ItemTestingObject> addItem(ItemTestingObject newItem){
         getItemArrayList().add(newItem);
         return itemArrayList;
     }
 
-    public ArrayList<Item> removeItem(ObservableList<Item> oldItems){
+    public ArrayList<ItemTestingObject> removeItem(ObservableList<ItemTestingObject> oldItems){
         getItemArrayList().removeAll(oldItems);
         return itemArrayList;
     }
 
-    public ArrayList<Item> clearList(ObservableList<Item> allItems){
+    public ArrayList<ItemTestingObject> clearList(ObservableList<ItemTestingObject> allItems){
         getItemArrayList().removeAll(allItems);
         return itemArrayList;
     }
-
 }

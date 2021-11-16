@@ -9,11 +9,11 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.HelloController">
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ucf.assignments.CreateNewItemController">
    <bottom>
       <HBox alignment="CENTER" prefHeight="40.0" prefWidth="200.0" spacing="10.0" BorderPane.alignment="CENTER">
-         <Button mnemonicParsing="false" onAction="#onNewItemOkClick" prefWidth="80.0" text="Ok"/>
-         <Button mnemonicParsing="false" onAction="#onItemCancelClick" prefWidth="80.0" text="Cancel"/>
+         <Button mnemonicParsing="false" onAction="#onNewItemOkClick" prefWidth="80.0" text="Ok" />
+         <Button mnemonicParsing="false" onAction="#onItemCancelClick" prefWidth="80.0" text="Cancel" />
       </HBox>
    </bottom>
    <center>
@@ -21,26 +21,26 @@
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <Label text="Enter Name: ">
                <font>
-                  <Font size="14.0"/>
+                  <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="newItemNameField" promptText="Item Name"/>
+            <TextField fx:id="newItemNameField" promptText="Item Name" />
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <Label text="Enter Description: ">
                <font>
-                  <Font size="14.0"/>
+                  <Font size="14.0" />
                </font>
             </Label>
-            <TextField fx:id="newItemDescField" prefHeight="90.0" prefWidth="250.0" promptText="Description"/>
+            <TextField fx:id="newItemDescField" prefHeight="90.0" prefWidth="250.0" promptText="Description" />
          </HBox>
          <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
             <Label text="Enter Due Date: ">
                <font>
-                  <Font size="14.0"/>
+                  <Font size="14.0" />
                </font>
             </Label>
-            <DatePicker fx:id="newItemDateField" promptText="Due Date"/>
+            <DatePicker fx:id="newItemDateField" promptText="Due Date" />
          </HBox>
       </VBox>
    </center>
